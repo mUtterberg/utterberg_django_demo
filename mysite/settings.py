@@ -112,6 +112,10 @@ SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
+# Other security options recommended by checklist:
+SECURE_HSTS_SECONDS = 5
+X_FRAME_OPTIONS = 'DENY'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
