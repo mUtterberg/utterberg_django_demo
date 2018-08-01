@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='catalog/')),
-    re_path(r'^favicon\.ico$', RedirectView.as_view(url=(settings.STATIC_URL + 'images/favicon.ico'), permanent=True)),
+    re_path(r'^favicon\.ico$', RedirectView.as_view(url=('/static/images/favicon.ico'), permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #Add Django site authentication urls (for login, logout, password management)
