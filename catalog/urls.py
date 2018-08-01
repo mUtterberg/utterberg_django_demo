@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path
 from . import views
 
 
@@ -36,10 +36,11 @@ urlpatterns += [
     path('book/<int:pk>/delete/', views.BookDelete.as_view(), name='book_delete'),
 ]
 
-# from django.conf import settings
-# from django.views.generic import RedirectView
+from django.conf import settings
+from django.views.generic import RedirectView
 #
-# # Favicon redirect
-# urlpatterns += [
+# Favicon redirect
+urlpatterns += [
+    path('favicon.ico', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
 #     re_path(r'^favicon\.ico$', RedirectView.as_view(url=(settings.STATIC_URL + 'images/favicon.ico'))),
-# ]
+]
