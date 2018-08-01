@@ -40,5 +40,5 @@ from django.views.generic import RedirectView
 
 # Favicon redirect
 urlpatterns += [
-    re_path(r'^favicon\.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
+    re_path(r'^favicon\.ico$', RedirectView.as_view(url='/catalog/static/images/favicon.ico')),
 ]
